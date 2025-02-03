@@ -33,7 +33,6 @@ const pecas = {
       "velocidade": -2,
     },
   };
-const cores = document.querySelectorAll("[data-imagem]")
 
 for (contador = 0; contador<controle.length; contador ++){
 
@@ -43,7 +42,6 @@ for (contador = 0; contador<controle.length; contador ++){
     teclas.addEventListener("click", (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
         atualizaEstatisticas(evento.target.dataset.peca)
-  
     })
 }
 
@@ -66,12 +64,3 @@ estatistica.forEach( (elemento) => {
 
 }
 
-cores.forEach( (elemento) => {
-  elemento.addEventListener("click", (evento) => {
-    trocaImagem(evento.target.dataset.imagem);
-  })
-})
-
-function  trocaImagem(cor){
-  document.querySelector(".robo").src="img/" + cor + ".png";
-}
