@@ -15,6 +15,7 @@ body {
     padding: 0;
     margin: 0;
     font-weight: 300;
+    
 }
 
 body, input {
@@ -24,7 +25,7 @@ body, input {
 main {
     width: 80vw;
     height: 80vh;
-    margin: 10vh 8vw 10vh 12vw;
+    margin: 10vh 10vw ;
     display: flex;
     gap: 1vw;
 }
@@ -38,10 +39,10 @@ main {
 }
 
 .robo {
-    height: 110%;
+    height: 108%;
     z-index: 1;
     position: absolute;
-    left: -20%;
+    left: -30%;
     top: -5%;
 }
 
@@ -50,8 +51,8 @@ main {
     font-weight: 500;
     font-size: 130px;
     position: absolute;
-    bottom: 7rem;
-    left: -3rem;
+    bottom: 1rem;
+    left: -5rem;
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -209,25 +210,38 @@ main {
     margin: 10px 0 0;
 }
 
-@media screen and (max-width: 1600px) {
-    body { 
-        font-size: 14px;
-    }
-    main {
-        width: 90vw;
-        height: 80vh;
-        margin: 5vh auto;
-    }
+.botoes{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between; 
+   margin: -10.7% 28% 0 45%;
+   gap: 20px;  
+   
 }
 
-@media screen and (max-width: 1200px) {
-    body { 
-        font-size: 13px;
-    }
+.botoes__botao{
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+    font-family: 'Teko', sans-serif;
 
-    main {
-        width: 96vw;
-        height: 80vh;
-        margin: 10vh auto;
-    }
 }
+
+.botoes__botao:hover {
+        background: var(--main-preto);
+        color: var(--main-branco)
+}
+    
+    
+    
+    
+    
+   
+
+
+

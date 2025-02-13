@@ -33,6 +33,7 @@ const pecas = {
       "velocidade": -2,
     },
   };
+const cores = document.querySelectorAll("[data-cor]")
 
 for (contador = 0; contador<controle.length; contador ++){
 
@@ -62,5 +63,15 @@ estatistica.forEach( (elemento) => {
     elemento.textContent = parseInt(elemento.textContent) +  pecas[peca][elemento.dataset.estatistica]
 });
 
+}
+
+cores.forEach( (elemento) => {
+  elemento.addEventListener("click" , (evento) => {
+    TrocaCor(elemento.dataset.cor)
+  })
+})
+
+function TrocaCor (cor){
+  document.querySelector(".robo").src ="img/robotron" + cor + ".png";
 }
 
